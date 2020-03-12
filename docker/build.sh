@@ -14,7 +14,7 @@ mkdir -p ${GOPATH}/src/github.com/gogs/
 ln -s /app/gogs/build ${GOPATH}/src/github.com/gogs/gogs
 cd ${GOPATH}/src/github.com/gogs/gogs
 # Needed since git 2.9.3 or 2.9.4
-git config --global http.https://gopkg.in.followRedirects true
+#git config --global http.https://gopkg.in.followRedirects true
 make build TAGS="sqlite cert pam"
 
 # Cleanup GOPATH
