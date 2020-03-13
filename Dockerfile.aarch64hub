@@ -1,4 +1,4 @@
-FROM arm64v8/alpine:3.10
+FROM arm64v8/alpine:latest
 
 ENV GOGS_CUSTOM /data/gogs
 ENV QEMU_EXECVE 1
@@ -20,7 +20,7 @@ RUN [ "cross-build-start" ]
 ADD https://github.com/tianon/gosu/releases/download/1.10/gosu-arm64 /usr/sbin/gosu
 RUN chmod +x /usr/sbin/gosu \
  && apk update \
- && apk --no-cache add ca-certificates bash git linux-pam s6 curl openssh shadow socat tzdata go=1.10.1-r0
+ && apk --no-cache add ca-certificates bash git linux-pam s6 curl openssh shadow socat tzdata go
 
 
 
